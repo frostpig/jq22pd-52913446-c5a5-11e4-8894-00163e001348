@@ -243,7 +243,7 @@ fieldset[disabled] .btn.active {
 .btn-white.btn-circle > i{color: #a5b6c7;background: #fff}
 .btn.btn-circle.disabled > i{background:#c4c9cf;}
 
-[class^="icon-"]:before, [class*=" icon-"]:before{text-decoration: none;margin-left: 0.2em;margin-right: 0.2em}
+[class^="icon-"]:before, [class*=" icon-"]:before{text-decoration: none;margin-left: 1em;margin-right: 0.2em}
 .icon-stack [class^="icon-"]:before, .icon-stack [class*=" icon-"]:before{margin: 0;}
 .icon-xlarge:before{font-size:1.5em;vertical-align: -14%;}
 .btn-block{padding-left: 12px;padding-right: 12px}
