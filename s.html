@@ -1,36 +1,52 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>jquery左右滑动效果的实现</title>
-    <script type="text/javascript" src="http://www.cleey.com/Public/plugins/web/jquery.min.js"></script>
-
+    <style type="text/css">
+        body , ul , li {
+            padding:0;
+            margin:0;
+        }
+        body {
+            font:12px/1.5 Verdana, Geneva, sans-serif;
+        }
+        ul {
+            list-style:none;
+        }
+        ul li {
+            float:left;
+            padding:10px;
+            cursor:pointer;
+            border:solid 1px #333;
+        }
+    </style>
+    <script type="text/javascript" src="/bootstrap-150308231052/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
-        $(function(){
-            $("#btn_a").click(function(){ $("#unit").stop(true,false).animate({"left":0},500); });
-            $("#btn_b").click(function(){ $("#unit").stop(true,false).animate({"left":-300},500); })
+        $(document).ready(function() {
+            $('li').hover(function() {
+                $(this).stop().animate({
+                    height:100
+                } , 200 , function() {
+
+                });
+            } , function() {
+                $(this).stop().animate({
+                    height:24
+                } , 200 , function() {
+
+                });
+            });
         });
     </script>
-
-    <style type="text/css">
-        #box{width:300px; height:150px; margin-bottom:50px; position:relative; overflow:hidden;}
-        #unit{width:600px; position:absolute;}
-        #unit div{float:left; width:300px; height:150px;}
-        #bg_a{background-color:#F30;}
-        #bg_b{background-color:#F90;}
-        #btn_a,#btn_b{float:left; width:50px; padding-right:50px; cursor:pointer;}
-    </style>
 </head>
 
 <body>
-<div>
-    <div id="box">
-        <div id="unit">
-            <div id="bg_a">框一</div>
-            <div id="bg_b">框二</div>
-        </div>
-    </div>
-    <div id="btn_a">左</div>
-    <div id="btn_b">右</div>
-</div>
+<ul>
+    <li>首页</li>
+    <li>新闻</li>
+    <li>产品</li>
+    <li>关于我们</li>
+</ul>
+
+
 </body>
 </html>

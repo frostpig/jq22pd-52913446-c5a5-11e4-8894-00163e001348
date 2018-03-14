@@ -57,7 +57,7 @@ $(function(){
             $('.nav-slide').removeClass('hover');
         }
 
-    })
+    });
 
     function thisMouseOut(){
         $('.nav-slide').removeClass('hover');
@@ -69,8 +69,10 @@ $(function(){
     })
     $('.nav-slide').mouseleave(function(){
         $('.nav-slide').removeClass('hover');
-    })
+    });
 
 
 
-})
+});
+
+
